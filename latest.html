@@ -94,5 +94,35 @@ win.document.body.appendChild(iframe)
 }
 	</script>
 
+<style>
+button {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+</style>
+<body>
+	<button onclick="openGame()">Use Interstellar</button>
+	<script>
+		function openGame() {
+var win = window.open()
+var url = "https://coursey.fertilitypinpoint.com/"
+var iframe = win.document.createElement('iframe')
+iframe.style.width = "100%";
+iframe.style.height = "100%";
+iframe.style.border = "none";
+iframe.src = url
+win.document.body.appendChild(iframe)
+}
+	</script>
+
 <a href="/poetry-about-melons.html">Play Minecraft (No Server Support)</a>
 </html>
