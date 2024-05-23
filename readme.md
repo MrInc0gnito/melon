@@ -2,7 +2,7 @@ WE ARE NOT RESPONSIBLE FOR ANY ISSUES OR TROUBLE YOU FACE WHILST USING SNIPEPOET
 
 # Skip To Content Links
 [Lastest Links](https://github.com/MrInc0gnito/melon/?tab=readme-ov-file#latestlinks)
-[How To Host]([https://github.com/MrInc0gnito/melon/?tab=readme-ov-file#howtohost](https://github.com/MrInc0gnito/melon/?tab=readme-ov-file#how-to-host))
+[How To Host](https://github.com/MrInc0gnito/melon/?tab=readme-ov-file#how-to-host)
 [How To Update](https://github.com/MrInc0gnito/melon/?tab=readme-ov-file#updates)
 
 # Introduction
