@@ -1,4 +1,9 @@
-WE ARE NOT RESPONSIBLE FOR ANY ISSUES OR TROUBLE YOU FACE WHILST USING SNIPEPOETRY MELON!
+WE ARE NOT RESPONSIBLE FOR ANY ISSUES OR TROUBLE YOU FACE WHILST USING SNIPEPOETRY MELON! Thanks :D 💠
+
+# Skip To Content Links
+[Lastest Links](https://github.com/MrInc0gnito/melon/?tab=readme-ov-file#latestlinks)
+[How To Host](https://github.com/MrInc0gnito/melon/?tab=readme-ov-file#howtohost)
+[How To Update](https://github.com/MrInc0gnito/melon/?tab=readme-ov-file#updates)
 
 # Introduction
 Welcome, Melon has got many upgraded features including hosting everything so you don't need to download a seperate file for games!
@@ -49,3 +54,11 @@ Host On https://app.netlify.com/
 1. Sign Up/In
 2. Fork This and go through the setup
 DONE!
+
+# Updates
+When we update SnipePoetry Melon, you must have to do some manual work!
+
+For Pages.DEV you must ReFork the project and update the site so it uses the new fork!
+For Glitch.COM you must manually download each file and set it up again!
+Fpr Netlify.COM you must ReFork the project and update the site so it uses the new fork!
+ 
