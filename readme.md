@@ -1,4 +1,4 @@
-WE ARE NOT RESPONSIBLE FOR ANY ISSUE OR TROUBLE YOU FACE WHILST USING SNIPEPOETRY MELON!
+WE ARE NOT RESPONSIBLE FOR ANY ISSUES OR TROUBLE YOU FACE WHILST USING SNIPEPOETRY MELON!
 
 # Introduction
 Welcome, Melon has got many upgraded features including hosting everything so you don't need to download a seperate file for games!
