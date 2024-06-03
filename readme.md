@@ -60,5 +60,5 @@ When we update SnipePoetry Melon, you must have to do some manual work!
 
 For Pages.DEV you must ReFork the project and update the site so it uses the new fork!
 For Glitch.COM you must manually download each file and set it up again!
-Fpr Netlify.COM you must ReFork the project and update the site so it uses the new fork!
+For Netlify.COM you must ReFork the project and update the site so it uses the new fork!
  
