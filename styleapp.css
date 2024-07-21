@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Minecraft Fifty Solid';
-    src: url('fonts/MinecraftFiftySolid.otf') format('otf')
+    src: url('fonts/MinecraftFiftySolid.otf') format('opentype'); /* Updated to .otf */
     font-weight: normal;
     font-style: normal;
 }
