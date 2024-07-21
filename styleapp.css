@@ -92,8 +92,10 @@ main {
 }
 
 .game-card img {
-    width: 100%;
+    width: 80px; /* Adjust size to fit as an icon */
+    height: 80px; /* Adjust size to fit as an icon */
     border-bottom: 4px solid #3c763d;
+    object-fit: cover; /* Ensure the image fits the dimensions */
 }
 
 .game-card h3 {
