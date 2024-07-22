@@ -21,9 +21,9 @@ header {
     border-bottom: 5px solid #2a4d23; /* Darker green border */
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2rem;
+header .logo {
+    max-width: 200px; /* Adjust width to fit your logo */
+    height: auto;
 }
 
 nav ul {
@@ -49,7 +49,7 @@ nav ul li a:hover {
 
 main {
     padding: 2rem;
-    background-image: url('minecraft-background.png'); /* Pixelated background texture */
+    background-image: url('images/minecraft-background.png'); /* Pixelated background texture */
     background-size: cover;
 }
 
