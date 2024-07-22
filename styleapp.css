@@ -166,8 +166,8 @@ footer {
 }
 
 .glass-button img {
-    width: 16px; /* Adjusted size */
-    height: 16px; /* Adjusted size */
+    width: 20px; /* Adjusted size */
+    height: 20px; /* Adjusted size */
     margin-left: 0.5rem;
 }
 
@@ -180,8 +180,14 @@ footer {
     height: 100%;
     background: linear-gradient(120deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.2) 100%);
     transition: all 0.5s ease;
+    z-index: 1;
 }
 
 .glass-button:hover .glossy-effect {
     left: 100%;
+}
+
+.glass-button span, .glass-button img {
+    position: relative;
+    z-index: 2; /* Make sure text and logo are above the glossy effect */
 }
