@@ -67,6 +67,8 @@ main {
 
 .slide img {
     width: 100%;
+    height: 400px; /* Fixed height for consistency */
+    object-fit: cover; /* Ensures the image covers the container */
     display: block;
     border-bottom: 4px solid #3c763d;
 }
