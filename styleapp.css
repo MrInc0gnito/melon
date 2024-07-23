@@ -150,3 +150,11 @@ footer {
     box-shadow: 0 2px #1e3b1e;
     transform: translateY(2px);
 }
+
+h2 {
+    color: #fff; /* Change h2 text to white */
+}
+
+#about p {
+    color: #fff; /* Change about section text to white */
+}
