@@ -129,65 +129,24 @@ footer {
     width: 100%;
 }
 
-.github-button {
+.minecraft-button {
     display: inline-block;
-    background-color: #3c763d;
+    background-color: #4CAF50; /* Minecraft green */
     color: #fff;
     padding: 0.5rem 1rem;
     text-decoration: none;
     border-radius: 4px;
     font-weight: bold;
+    box-shadow: 0 4px #2a4d23;
     transition: all 0.3s ease;
 }
 
-.github-button:hover {
-    background-color: #2a4d23;
+.minecraft-button:hover {
+    background-color: #45a049;
+    box-shadow: 0 4px #1e3b1e;
 }
 
-.glass-button {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    transition: background 0.3s ease, transform 0.3s ease;
-    position: relative; /* For the glossy animation */
-    overflow: hidden; /* To hide the glossy animation */
-}
-
-.glass-button:hover {
-    background: rgba(255, 255, 255, 0.4);
-    transform: translateY(-2px);
-}
-
-.glass-button img {
-    width: 20px; /* Adjusted size */
-    height: 20px; /* Adjusted size */
-    margin-left: 0.5rem;
-}
-
-.glossy-effect {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 200%;
-    height: 100%;
-    background: linear-gradient(120deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.2) 100%);
-    transition: all 0.5s ease;
-    z-index: 1;
-}
-
-.glass-button:hover .glossy-effect {
-    left: 100%;
-}
-
-.glass-button span, .glass-button img {
-    position: relative;
-    z-index: 2; /* Make sure text and logo are above the glossy effect */
+.minecraft-button:active {
+    box-shadow: 0 2px #1e3b1e;
+    transform: translateY(2px);
 }
