@@ -24,23 +24,28 @@ document.getElementById('playButton').addEventListener('click', function() {
 
 function toggleFullscreen() {
     const modal = document.getElementById('gameModal');
+    const modalContent = document.querySelector('.modal-content');
     if (modal.requestFullscreen) {
         modal.requestFullscreen();
+        modalContent.classList.add('hidden');
         const iframe = document.getElementById('gameFrame');
         iframe.style.height = '100vh';
         iframe.style.width = '100vw';
     } else if (modal.mozRequestFullScreen) { /* Firefox */
         modal.mozRequestFullScreen();
+        modalContent.classList.add('hidden');
         const iframe = document.getElementById('gameFrame');
         iframe.style.height = '100vh';
         iframe.style.width = '100vw';
     } else if (modal.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
         modal.webkitRequestFullscreen();
+        modalContent.classList.add('hidden');
         const iframe = document.getElementById('gameFrame');
         iframe.style.height = '100vh';
         iframe.style.width = '100vw';
     } else if (modal.msRequestFullscreen) { /* IE/Edge */
         modal.msRequestFullscreen();
+        modalContent.classList.add('hidden');
         const iframe = document.getElementById('gameFrame');
         iframe.style.height = '100vh';
         iframe.style.width = '100vw';
