@@ -216,3 +216,11 @@ footer {
 .fullscreen .fullscreen-button {
     display: none;
 }
+
+.fullscreen .close-button {
+    display: none;
+}
+
+.fullscreen #playButton {
+    display: none;
+}
