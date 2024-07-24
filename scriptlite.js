@@ -1,4 +1,3 @@
-// JavaScript to handle modal and game controls
 function openGameModal(gameName) {
     const modal = document.getElementById('gameModal');
     document.getElementById('gameTitle').innerText = gameName;
@@ -27,11 +26,23 @@ function toggleFullscreen() {
     const modal = document.getElementById('gameModal');
     if (modal.requestFullscreen) {
         modal.requestFullscreen();
+        const iframe = document.getElementById('gameFrame');
+        iframe.style.height = '100vh';
+        iframe.style.width = '100vw';
     } else if (modal.mozRequestFullScreen) { /* Firefox */
         modal.mozRequestFullScreen();
+        const iframe = document.getElementById('gameFrame');
+        iframe.style.height = '100vh';
+        iframe.style.width = '100vw';
     } else if (modal.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
         modal.webkitRequestFullscreen();
+        const iframe = document.getElementById('gameFrame');
+        iframe.style.height = '100vh';
+        iframe.style.width = '100vw';
     } else if (modal.msRequestFullscreen) { /* IE/Edge */
         modal.msRequestFullscreen();
+        const iframe = document.getElementById('gameFrame');
+        iframe.style.height = '100vh';
+        iframe.style.width = '100vw';
     }
 }
