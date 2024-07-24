@@ -5,54 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poetry Lite</title>
     <link rel="stylesheet" href="stylelite.css">
-    <link rel="icon" href="google-logo.png" type="image/png"> <!-- Favicon -->
+    <link rel="icon" href="images/google-icon.png" type="image/png">
 </head>
 <body>
     <header>
-        <a href="#home"><img src="images/latelogo.png" alt="Unblocked Games Logo" class="logo"></a>
+        <img src="images/latelogo.png" alt="Logo" class="logo">
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#games">Games</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="melon-art.html" class="minecraft-button">Download</a></li>
+                <li><a href="/poetrylite.html" class="minecraft-button">Poetry Lite</a></li>
                 <li><a href="https://github.com/MrInc0gnito/melon/tree/main" class="minecraft-button">GitHub</a></li>
-                <li><a href="melon-art.html" class="minecraft-button" download>Download</a></li>
             </ul>
         </nav>
     </header>
-
     <main>
-        <section id="games">
-            <h2>Featured Games</h2>
-            <div class="game-cards">
-                <!-- Repeat this block 30 times -->
-                <div class="game-card">
-                    <img src="images/game-icon.png" alt="Game Icon">
-                    <h3>Game 1</h3>
-                    <button class="play-button" onclick="openGameModal('Game 1')">Open</button>
-                </div>
-                <!-- Repeat end -->
+        <h2>Featured Games</h2>
+        <div class="game-cards">
+            <!-- Example Game Card -->
+            <div class="game-card">
+                <img src="images/game1-icon.png" alt="Game 1">
+                <h3>Game 1</h3>
+                <button class="play-button" onclick="openGameModal('Game 1')">Open</button>
             </div>
-        </section>
+            <!-- Add more game cards here -->
+        </div>
     </main>
+    <footer>
+        <p>© 2024 Unblocked Games. All rights reserved.</p>
+    </footer>
 
+    <!-- Game Modal -->
     <div id="gameModal" class="modal">
         <div class="modal-content">
             <span class="close-button" onclick="closeGameModal()">&times;</span>
-            <h2 id="gameTitle">Game Title</h2>
-            <iframe id="gameFrame" src="" frameborder="0"></iframe>
-            <button class="fullscreen-button" onclick="toggleFullscreen()">
+            <button id="fullscreenButton" class="fullscreen-button" onclick="toggleFullscreen()">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="fullscreen-icon">
                     <path d="M32 32C14.3 32 0 46.3 0 64l0 96c0 17.7 14.3 32 32 32s32-14.3 32-32l0-64 64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7 14.3 32 32 32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0 0-64zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32l64 0 0 64c0 17.7 14.3 32 32 32s32-14.3 32-32l0-96c0-17.7-14.3-32-32-32l-96 0zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 64-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l96 0c17.7 0 32-14.3 32-32l0-96z"/>
                 </svg>
             </button>
-            <button id="playButton" class="play-button">Start Game</button>
+            <h1 id="gameTitle">Game Title</h1>
+            <iframe id="gameFrame" width="100%" height="400" frameborder="0"></iframe>
+            <button id="playButton">Start Game</button>
         </div>
     </div>
-
-    <footer>
-        <p>&copy; 2024 Unblocked Games. All rights reserved.</p>
-    </footer>
 
     <script src="scriptlite.js"></script>
 </body>
