@@ -165,33 +165,31 @@ footer {
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-.close-button:hover,
-.close-button:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
+.close-button:hover {
+    color: #f00; /* Red color on hover */
 }
 
 .fullscreen-button {
     position: absolute;
     bottom: 10px;
     left: 10px;
-    background-color: #fff;
+    background-color: #3c763d; /* Same green as modal */
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .fullscreen-button:hover {
-    background-color: #f00;
+    background-color: #f00; /* Animation effect */
 }
 
 .fullscreen-icon {
     width: 24px;
     height: 24px;
-    fill: #000;
+    fill: #fff;
 }
 
 #playButton {
