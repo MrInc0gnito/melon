@@ -24,30 +24,24 @@ document.getElementById('playButton').addEventListener('click', function() {
 
 function toggleFullscreen() {
     const modal = document.getElementById('gameModal');
-    const modalContent = document.querySelector('.modal-content');
     if (modal.requestFullscreen) {
         modal.requestFullscreen();
-        modalContent.classList.add('hidden');
-        const iframe = document.getElementById('gameFrame');
-        iframe.style.height = '100vh';
-        iframe.style.width = '100vw';
     } else if (modal.mozRequestFullScreen) { /* Firefox */
         modal.mozRequestFullScreen();
-        modalContent.classList.add('hidden');
-        const iframe = document.getElementById('gameFrame');
-        iframe.style.height = '100vh';
-        iframe.style.width = '100vw';
     } else if (modal.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
         modal.webkitRequestFullscreen();
-        modalContent.classList.add('hidden');
-        const iframe = document.getElementById('gameFrame');
-        iframe.style.height = '100vh';
-        iframe.style.width = '100vw';
     } else if (modal.msRequestFullscreen) { /* IE/Edge */
         modal.msRequestFullscreen();
-        modalContent.classList.add('hidden');
-        const iframe = document.getElementById('gameFrame');
-        iframe.style.height = '100vh';
-        iframe.style.width = '100vw';
     }
 }
+
+document.addEventListener('fullscreenchange', function() {
+    const modal = document.getElementById('gameModal');
+    if (document.fullscreenElement === modal) {
+        document.querySelector('.modal-content').style.display = 'none';
+        document.querySelector('.fullscreen-button').style.display = 'none';
+    } else {
+        document.querySelector('.modal-content').style.display = 'block';
+        document.querySelector('.fullscreen-button').style.display = 'block';
+    }
+});
