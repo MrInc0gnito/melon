@@ -62,12 +62,16 @@ document.addEventListener('fullscreenchange', function() {
         fullscreenElement.querySelector('.fullscreen-button').style.display = 'none';
         fullscreenElement.querySelector('.close-button').style.display = 'none';
         fullscreenElement.querySelector('.play-button').style.display = 'none';
+        fullscreenElement.querySelector('iframe').style.width = '100vw';
+        fullscreenElement.querySelector('iframe').style.height = '100vh';
     } else {
         document.querySelectorAll('.modal').forEach(modal => {
             modal.querySelector('.modal-content').style.display = 'block';
             modal.querySelector('.fullscreen-button').style.display = 'block';
             modal.querySelector('.close-button').style.display = 'block';
             modal.querySelector('.play-button').style.display = 'block';
+            modal.querySelector('iframe').style.width = '100%';
+            modal.querySelector('iframe').style.height = '400px';
         });
     }
 });
