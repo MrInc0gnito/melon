@@ -1,13 +1,21 @@
 // Create modals for each game
-for (let i = 1; i <= 10; i++) {
+const games = [
+    { id: 1, name: "Miniblox", url: "https://miniblox.io/" },
+    { id: 2, name: "Voxiom", url: "https://voxiom.io/" },
+    { id: 3, name: "Bloxd", url: "https://bloxd.io/" },
+    { id: 4, name: "Cuberealm", url: "https://cuberealm.io/" },
+    { id: 5, name: "Voxel Game", url: "https://guckstift.github.io/voxel-game-js/" }
+];
+
+games.forEach(game => {
     let modalHTML = `
-        <div id="gameModal${i}" class="modal">
+        <div id="gameModal${game.id}" class="modal">
             <div class="modal-content">
-                <span class="close-button" onclick="closeGameModal(${i})">&times;</span>
-                <h2 id="gameTitle${i}">Game ${i}</h2>
-                <iframe id="gameFrame${i}" src="" width="100%" height="400px" frameborder="0" allowfullscreen></iframe>
-                <button id="playButton${i}" class="play-button" onclick="togglePlay(${i})">Start Game</button>
-                <button class="fullscreen-button" onclick="toggleFullscreen(${i})">
+                <span class="close-button" onclick="closeGameModal(${game.id})">&times;</span>
+                <h2 id="gameTitle${game.id}">${game.name}</h2>
+                <iframe id="gameFrame${game.id}" src="${game.url}" width="100%" height="400px" frameborder="0" allowfullscreen></iframe>
+                <button id="playButton${game.id}" class="play-button" onclick="togglePlay(${game.id})">Start Game</button>
+                <button class="fullscreen-button" onclick="toggleFullscreen(${game.id})">
                     <svg class="fullscreen-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                         <path d="M32 32C14.3 32 0 46.3 0 64l0 96c0 17.7 14.3 32 32 32s32-14.3 32-32l0-64 64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7 14.3 32 32 32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0 0-64zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32l64 0 0 64c0 17.7 14.3 32 32 32s32-14.3 32-32l0-96c0-17.7-14.3-32-32-32l-96 0zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 64-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l96 0c17.7 0 32-14.3 32-32l0-96z"/>
                     </svg>
@@ -16,12 +24,11 @@ for (let i = 1; i <= 10; i++) {
         </div>
     `;
     document.getElementById('gameModals').innerHTML += modalHTML;
-}
+});
 
 function openGameModal(gameName, modalId) {
     const modal = document.getElementById(`gameModal${modalId}`);
     document.getElementById(`gameTitle${modalId}`).innerText = gameName;
-    document.getElementById(`gameFrame${modalId}`).src = ''; // Set URL later
     modal.style.display = 'block';
 }
 
