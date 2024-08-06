@@ -1,167 +1,217 @@
-/* General Styles */
+@font-face {
+    font-family: 'Minecraft Fifty Solid';
+    src: url('fonts/MinecraftFiftySolid.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     font-family: 'Minecraft Fifty Solid', sans-serif;
-    background: url('images/background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
     margin: 0;
     padding: 0;
+    background-image: url('images/minecraft-background.png');
+    background-size: cover;
+    color: #fff;
 }
 
 header {
+    background-color: #3c763d; /* Dark green Minecraft theme */
+    color: #fff;
+    padding: 1rem;
     text-align: center;
-    padding: 20px;
+    border-bottom: 5px solid #2a4d23; /* Darker green for contrast */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.logo {
-    width: 200px;
+header .logo {
+    max-width: 200px;
     height: auto;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
 }
 
-nav a {
-    color: white;
+nav ul li a {
+    color: #fff;
     text-decoration: none;
-    font-size: 16px;
+    font-weight: bold;
     padding: 10px 20px;
-    background-color: #00bcd4; /* Adjust if needed */
-    border-radius: 5px;
+    background-color: #4CAF50; /* Minecraft green for buttons */
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
-nav a:hover {
-    background-color: #0097a7;
-}
-
-.minecraft-button {
-    background-image: url('images/minecraft-net-button.png');
-    background-size: cover;
-    width: 150px;
-    height: 50px;
-    display: inline-block;
+nav ul li a:hover {
+    background-color: #45a049; /* Darker green for hover */
 }
 
 main {
-    padding: 20px;
-    text-align: center;
+    padding: 2rem;
 }
 
 h2 {
-    font-size: 24px;
+    color: #fff;
+}
+
+#about p {
+    color: #fff;
 }
 
 .game-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     gap: 20px;
 }
 
 .game-card {
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    padding: 10px;
-    width: 150px;
+    background: #a3d9a5; /* Light green for cards */
+    border: 4px solid #3c763d; /* Dark green border */
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem;
     text-align: center;
-    transition: transform 0.2s;
+    width: 150px;
 }
 
 .game-card img {
     width: 80px;
     height: 80px;
+    border-bottom: 4px solid #3c763d; /* Dark green bottom border */
+    object-fit: cover;
 }
 
 .game-card h3 {
-    margin: 10px 0;
-    font-size: 18px;
+    margin: 0.5rem 0;
 }
 
 .play-button, .fullscreen-button {
-    background-color: #00bcd4;
-    border: none;
-    color: white;
+    background-color: #3c763d; /* Same green as modal */
+    color: #fff;
     padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+    border: none;
+    border-radius: 4px;
     font-family: 'Minecraft Fifty Solid', sans-serif;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .play-button:hover, .fullscreen-button:hover {
-    background-color: #0097a7;
+    background-color: #2a4d23; /* Darker green for hover */
+}
+
+.fullscreen-button {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: #3c763d; /* Same green as modal */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.fullscreen-button:hover {
+    background-color: #ff0000; /* Red when hovered over */
+}
+
+.fullscreen-icon {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+}
+
+#playButton {
+    display: block;
+    margin: 20px auto;
+    background-color: #00ff00; /* Green background */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#playButton.active {
+    background-color: #ff0000; /* Red when active */
 }
 
 footer {
+    background-color: #3c763d;
+    color: #fff;
     text-align: center;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 /* Modal Styles */
 .modal {
     display: none;
     position: fixed;
-    top: 0;
+    z-index: 1000;
     left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 1000;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
 }
 
 .modal-content {
-    background-color: #333;
+    background-color: #3c763d;
     margin: 5% auto;
     padding: 20px;
     width: 80%;
     max-width: 800px;
+    border: 1px solid #888;
     border-radius: 10px;
     position: relative;
-}
-
-.modal-content h2 {
-    margin: 0 0 20px;
-}
-
-iframe {
-    border: none;
-    width: 100%;
-    height: 400px;
-    border-radius: 5px;
+    color: #fff;
 }
 
 .close-button {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 24px;
-    color: white;
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 .close-button:hover {
-    color: red;
+    color: #f00; /* Red color on hover */
 }
 
-.modal-controls {
-    text-align: center;
-    margin-top: 20px;
+/* Hide UI elements in fullscreen mode */
+.fullscreen .modal-content {
+    display: none;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .game-card {
-        width: 120px;
-    }
-    
-    .play-button, .fullscreen-button {
-        padding: 8px 16px;
-    }
+.fullscreen .fullscreen-button {
+    display: none;
+}
+
+.fullscreen .close-button {
+    display: none;
+}
+
+.fullscreen #playButton {
+    display: none;
 }
