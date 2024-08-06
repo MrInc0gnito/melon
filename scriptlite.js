@@ -36,44 +36,32 @@ function openGameModal(gameName, modalId) {
 function closeGameModal(modalId) {
     const modal = document.getElementById(`gameModal${modalId}`);
     modal.style.display = 'none';
-    stopGame(modalId); // Stop the game and cut off music when the modal is closed
+    const iframe = document.getElementById(`gameFrame${modalId}`);
+    iframe.src = ""; // Stop the game and its sound
 }
 
 function togglePlay(modalId) {
     const iframe = document.getElementById(`gameFrame${modalId}`);
-    const playButton = document.getElementById(`playButton${modalId}`);
-    
-    if (playButton.innerText === 'Start Game') {
-        playButton.innerText = 'Stop Game';
-        iframe.src = iframe.getAttribute('data-src'); // Load the game URL
+    const button = document.getElementById(`playButton${modalId}`);
+    if (button.innerText === 'Start Game') {
+        iframe.src = iframe.getAttribute('data-src'); // Load game URL
+        button.innerText = 'Stop Game';
     } else {
-        playButton.innerText = 'Start Game';
-        stopGame(modalId); // Stop the game
+        iframe.src = ""; // Stop game and sound
+        button.innerText = 'Start Game';
     }
-}
-
-function stopGame(modalId) {
-    const iframe = document.getElementById(`gameFrame${modalId}`);
-    iframe.src = ''; // Stop any ongoing media by clearing the src
 }
 
 function toggleFullscreen(modalId) {
     const modal = document.getElementById(`gameModal${modalId}`);
+    const iframe = document.getElementById(`gameFrame${modalId}`);
     if (modal.requestFullscreen) {
         modal.requestFullscreen();
     } else if (modal.mozRequestFullScreen) { /* Firefox */
         modal.mozRequestFullScreen();
-    } else if (modal.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+    } else if (modal.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
         modal.webkitRequestFullscreen();
     } else if (modal.msRequestFullscreen) { /* IE/Edge */
         modal.msRequestFullscreen();
     }
 }
-
-document.addEventListener('fullscreenchange', function() {
-    const fullscreenElement = document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement;
-    if (!fullscreenElement) {
-        document.querySelectorAll('.modal').forEach(modal => modal.style.display = 'none');
-        document.querySelectorAll('.play-button').forEach(button => button.innerText = 'Start Game');
-    }
-});
