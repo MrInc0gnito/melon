@@ -5,57 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unblocked Games</title>
     <link rel="stylesheet" href="stylelite.css">
-    <script src="scriptlite.js" defer></script>
 </head>
 <body>
     <header>
-        <img src="images/latelogo.png" alt="Unblocked Games" class="logo">
+        <img src="images/latelogo.png" alt="Logo" class="logo">
         <nav>
             <ul>
-                <li><a href="#" onclick="window.location.reload()">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="poetrylite.html" download="poetrylite.html">Install</a></li>
-                <li><a href="https://github.com/MrInc0gnito/melon/tree/main" class="minecraft-button">GitHub</a></li>
+                <li><a href="https://github.com/MrInc0gnito/melon/tree/main" target="_blank">
+                    <img src="https://minecraft.net/favicon.ico" alt="GitHub" class="minecraft-button">
+                </a></li>
             </ul>
         </nav>
     </header>
+
     <main>
         <h2>Featured Games</h2>
         <div class="game-cards">
-            <!-- Game Cards -->
-            <div class="game-card" onclick="openGameModal('Miniblox', 1)">
-                <img src="https://miniblox.io/favicon.ico" alt="Miniblox">
-                <h3>Miniblox</h3>
-                <button class="play-button">Open</button>
+            <!-- Example Game Card -->
+            <div class="game-card">
+                <img src="https://example.com/game-icon.png" alt="Game Icon">
+                <h3>Game Title</h3>
+                <button onclick="openGameModal('Game Title', 1)">Open</button>
             </div>
-            <div class="game-card" onclick="openGameModal('Voxiom', 2)">
-                <img src="https://voxiom.io/favicon.ico" alt="Voxiom">
-                <h3>Voxiom</h3>
-                <button class="play-button">Open</button>
-            </div>
-            <div class="game-card" onclick="openGameModal('Bloxd', 3)">
-                <img src="https://bloxd.io/favicon.ico" alt="Bloxd">
-                <h3>Bloxd</h3>
-                <button class="play-button">Open</button>
-            </div>
-            <div class="game-card" onclick="openGameModal('Cuberealm', 4)">
-                <img src="https://cuberealm.io/favicon.ico" alt="Cuberealm">
-                <h3>Cuberealm</h3>
-                <button class="play-button">Open</button>
-            </div>
-            <div class="game-card" onclick="openGameModal('Voxel Game', 5)">
-                <img src="https://guckstift.github.io/voxel-game-js/favicon.ico" alt="Voxel Game">
-                <h3>Voxel Game</h3>
-                <button class="play-button">Open</button>
-            </div>
+            <!-- Repeat for each game card -->
         </div>
     </main>
-    <footer>
-        &copy; 2024 Unblocked Games
-    </footer>
 
-    <!-- Game Modals -->
+    <!-- Modals for each game -->
     <div id="gameModals">
-        <!-- Modals will be inserted here by JavaScript -->
+        <div id="gameModal1" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeGameModal(1)">&times;</span>
+                <h2 id="gameTitle1">Game Title</h2>
+                <iframe id="gameFrame1" data-src="https://miniblox.io/" width="100%" height="400px" frameborder="0" allowfullscreen></iframe>
+                <div class="modal-controls">
+                    <button id="playButton1" class="play-button" onclick="togglePlay(1)">Start Game</button>
+                    <button class="fullscreen-button" onclick="toggleFullscreen(1)">
+                        <svg class="fullscreen-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M32 32C14.3 32 0 46.3 0 64l0 96c0 17.7 14.3 32 32 32s32-14.3 32-32l0-64 64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7 14.3 32 32 32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0 0-64zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32l64 0 0 64c0 17.7 14.3 32 32 32s32-14.3 32-32l0-96c0-17.7-14.3-32-32-32l-96 0zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 64-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l96 0c17.7 0 32-14.3 32-32l0-96z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Repeat for each game modal with unique IDs -->
+        <!-- Example for second game -->
+        <div id="gameModal2" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeGameModal(2)">&times;</span>
+                <h2 id="gameTitle2">Game Title</h2>
+                <iframe id="gameFrame2" data-src="https://voxiom.io/" width="100%" height="400px" frameborder="0" allowfullscreen></iframe>
+                <div class="modal-controls">
+                    <button id="playButton2" class="play-button" onclick="togglePlay(2)">Start Game</button>
+                    <button class="fullscreen-button" onclick="toggleFullscreen(2)">
+                        <svg class="fullscreen-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M32 32C14.3 32 0 46.3 0 64l0 96c0 17.7 14.3 32 32 32s32-14.3 32-32l0-64 64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7 14.3 32 32 32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0 0-64zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32l64 0 0 64c0 17.7 14.3 32 32 32s32-14.3 32-32l0-96c0-17.7-14.3-32-32-32l-96 0zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 64-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l96 0c17.7 0 32-14.3 32-32l0-96z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Continue adding additional modals similarly -->
     </div>
+
+    <footer>
+        <p>&copy; 2024 Unblocked Games. All rights reserved.</p>
+    </footer>
+    
+    <script src="scriptlite.js"></script>
 </body>
 </html>
