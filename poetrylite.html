@@ -11,7 +11,7 @@
         <img src="images/latelogo.png" alt="Logo" class="logo">
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="/latest.html">Home</a></li>
                 <li><a href="poetrylite.html" download="poetrylite.html">Install</a></li>
                 <li><a href="https://github.com/MrInc0gnito/melon/tree/main" target="_blank">
                     <img src="https://minecraft.net/favicon.ico" alt="GitHub" class="minecraft-button">
@@ -23,22 +23,42 @@
     <main>
         <h2>Featured Games</h2>
         <div class="game-cards">
-            <!-- Example Game Card -->
+            <!-- Game Cards -->
             <div class="game-card">
-                <img src="https://example.com/game-icon.png" alt="Game Icon">
-                <h3>Game Title</h3>
-                <button onclick="openGameModal('Game Title', 1)">Open</button>
+                <img src="https://preview.redd.it/the-new-icons-kinda-goofy-on-mac-os-v0-gtfc99yy8q4b1.png?width=416&format=png&auto=webp&s=9a6ede1de47144442835fe645dcdc5a3705d8db6" alt="Miniblox">
+                <h3>Miniblox</h3>
+                <button onclick="openGameModal('Miniblox', 1)">Open</button>
             </div>
-            <!-- Repeat for each game card -->
+            <div class="game-card">
+                <img src="https://static.wikia.nocookie.net/subwaysurf/images/8/8f/Oxford_easter_app_icon.png/revision/latest/scale-to-width-down/250?cb=20220404101134" alt="Voxiom">
+                <h3>Voxiom</h3>
+                <button onclick="openGameModal('Voxiom', 2)">Open</button>
+            </div>
+            <div class="game-card">
+                <img src="https://static.wikia.nocookie.net/subwaysurf/images/2/2d/SeventhAvatar.jpg/revision/latest/scale-to-width-down/250?cb=20180314123444" alt="Bloxd">
+                <h3>Bloxd</h3>
+                <button onclick="openGameModal('Bloxd', 3)">Open</button>
+            </div>
+            <div class="game-card">
+                <img src="https://play-lh.googleusercontent.com/Lf-c_8Tk6ppqF8aGmMhWNDFvWDmKakkRXGXZh0e33xHlgJ4o3n7D-eIVCOGT8X7eeuY" alt="CubeRealm">
+                <h3>CubeRealm</h3>
+                <button onclick="openGameModal('CubeRealm', 4)">Open</button>
+            </div>
+            <div class="game-card">
+                <img src="https://guckstift.github.io/voxel-game-js/img/logo.png" alt="Voxel Game">
+                <h3>Voxel Game</h3>
+                <button onclick="openGameModal('Voxel Game', 5)">Open</button>
+            </div>
         </div>
     </main>
 
     <!-- Modals for each game -->
     <div id="gameModals">
+        <!-- Example Game Modal -->
         <div id="gameModal1" class="modal">
             <div class="modal-content">
                 <span class="close-button" onclick="closeGameModal(1)">&times;</span>
-                <h2 id="gameTitle1">Game Title</h2>
+                <h2 id="gameTitle1">Miniblox</h2>
                 <iframe id="gameFrame1" data-src="https://miniblox.io/" width="100%" height="400px" frameborder="0" allowfullscreen></iframe>
                 <div class="modal-controls">
                     <button id="playButton1" class="play-button" onclick="togglePlay(1)">Start Game</button>
@@ -55,7 +75,7 @@
         <div id="gameModal2" class="modal">
             <div class="modal-content">
                 <span class="close-button" onclick="closeGameModal(2)">&times;</span>
-                <h2 id="gameTitle2">Game Title</h2>
+                <h2 id="gameTitle2">Voxiom</h2>
                 <iframe id="gameFrame2" data-src="https://voxiom.io/" width="100%" height="400px" frameborder="0" allowfullscreen></iframe>
                 <div class="modal-controls">
                     <button id="playButton2" class="play-button" onclick="togglePlay(2)">Start Game</button>
@@ -68,6 +88,54 @@
             </div>
         </div>
         <!-- Continue adding additional modals similarly -->
+        <!-- Example for third game -->
+        <div id="gameModal3" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeGameModal(3)">&times;</span>
+                <h2 id="gameTitle3">Bloxd</h2>
+                <iframe id="gameFrame3" data-src="https://bloxd.io/" width="100%" height="400px" frameborder="0" allowfullscreen></iframe>
+                <div class="modal-controls">
+                    <button id="playButton3" class="play-button" onclick="togglePlay(3)">Start Game</button>
+                    <button class="fullscreen-button" onclick="toggleFullscreen(3)">
+                        <svg class="fullscreen-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M32 32C14.3 32 0 46.3 0 64l0 96c0 17.7 14.3 32 32 32s32-14.3 32-32l0-64 64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7 14.3 32 32 32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0 0-64zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32l64 0 0 64c0 17.7 14.3 32 32 32s32-14.3 32-32l0-96c0-17.7-14.3-32-32-32l-96 0zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 64-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l96 0c17.7 0 32-14.3 32-32l0-96z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Example for fourth game -->
+        <div id="gameModal4" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeGameModal(4)">&times;</span>
+                <h2 id="gameTitle4">CubeRealm</h2>
+                <iframe id="gameFrame4" data-src="https://cuberealm.io/" width="100%" height="400px" frameborder="0" allowfullscreen></iframe>
+                <div class="modal-controls">
+                    <button id="playButton4" class="play-button" onclick="togglePlay(4)">Start Game</button>
+                    <button class="fullscreen-button" onclick="toggleFullscreen(4)">
+                        <svg class="fullscreen-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M32 32C14.3 32 0 46.3 0 64l0 96c0 17.7 14.3 32 32 32s32-14.3 32-32l0-64 64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7 14.3 32 32 32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0 0-64zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32l64 0 0 64c0 17.7 14.3 32 32 32s32-14.3 32-32l0-96c0-17.7-14.3-32-32-32l-96 0zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 64-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l96 0c17.7 0 32-14.3 32-32l0-96z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Example for fifth game -->
+        <div id="gameModal5" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeGameModal(5)">&times;</span>
+                <h2 id="gameTitle5">Voxel Game</h2>
+                <iframe id="gameFrame5" data-src="https://guckstift.github.io/voxel-game-js/" width="100%" height="400px" frameborder="0" allowfullscreen></iframe>
+                <div class="modal-controls">
+                    <button id="playButton5" class="play-button" onclick="togglePlay(5)">Start Game</button>
+                    <button class="fullscreen-button" onclick="toggleFullscreen(5)">
+                        <svg class="fullscreen-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M32 32C14.3 32 0 46.3 0 64l0 96c0 17.7 14.3 32 32 32s32-14.3 32-32l0-64 64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7 14.3 32 32 32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0 0-64zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32l64 0 0 64c0 17.7 14.3 32 32 32s32-14.3 32-32l0-96c0-17.7-14.3-32-32-32l-96 0zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 64-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l96 0c17.7 0 32-14.3 32-32l0-96z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer>
