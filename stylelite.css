@@ -176,10 +176,6 @@ iframe {
     height: 24px;
 }
 
-.modal-controls {
-    text-align: center;
-}
-
 /* Media Queries */
 @media (max-width: 768px) {
     .game-card {
