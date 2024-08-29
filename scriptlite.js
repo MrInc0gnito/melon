@@ -65,3 +65,44 @@ function toggleFullscreen(modalId) {
         modal.msRequestFullscreen();
     }
 }
+
+// Function to open the game modal
+function openGameModal(gameName, gameId) {
+    const modal = document.getElementById(`gameModal${gameId}`);
+    modal.style.display = "block";
+    const iframe = document.getElementById(`gameFrame${gameId}`);
+    const gameSrc = iframe.getAttribute("data-src");
+    iframe.src = gameSrc; // Load the iframe content when the modal is opened
+}
+
+// Function to close the game modal
+function closeGameModal(gameId) {
+    const modal = document.getElementById(`gameModal${gameId}`);
+    modal.style.display = "none";
+    const iframe = document.getElementById(`gameFrame${gameId}`);
+    iframe.src = ""; // Clear the iframe content when the modal is closed
+}
+
+// Function to toggle the game iframe playing
+function togglePlay(gameId) {
+    const iframe = document.getElementById(`gameFrame${gameId}`);
+    if (iframe.src === "") {
+        iframe.src = iframe.getAttribute("data-src"); // Start game
+    } else {
+        iframe.src = ""; // Stop game
+    }
+}
+
+// Function to toggle fullscreen mode
+function toggleFullscreen(gameId) {
+    const iframe = document.getElementById(`gameFrame${gameId}`);
+    if (iframe.requestFullscreen) {
+        iframe.requestFullscreen();
+    } else if (iframe.mozRequestFullScreen) { /* Firefox */
+        iframe.mozRequestFullScreen();
+    } else if (iframe.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+        iframe.webkitRequestFullscreen();
+    } else if (iframe.msRequestFullscreen) { /* IE/Edge */
+        iframe.msRequestFullscreen();
+    }
+}
