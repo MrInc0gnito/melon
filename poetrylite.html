@@ -24,6 +24,68 @@
         <h2>Featured Games</h2>
         <div class="game-cards">
             <!-- Game Cards -->
+            
+        </div>
+    </main>
+
+    <!-- Modals for each game -->
+    <div id="gameModals">
+        <!-- Example Game Modal -->
+        <div id="gameModal1" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeGameModal(1)">&times;</span>
+                <h2 id="gameTitle1">Miniblox</h2>
+                <iframe id="gameFrame1" data-src="https://miniblox.io/" width="100%" height="400px" frameborder="0" allowfullscreen></iframe>
+                <div class="modal-controls">
+                    <button id="playButton1" class="play-button" onclick="togglePlay(1)">Start Game</button>
+                    <button class="fullscreen-button" onclick="toggleFullscreen(1)">
+                        <svg class="fullscreen-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M32 32C14.3 32 0 46.3 0 64l0 96c0 17.7 14.3 32 32 32s32-14.3 32-32l0-64 64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7 14.3 32 32 32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0 0-64zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32l64 0 0 64c0 17.7 14.3 32 32 32s32-14.3 32-32l0-96c0-17.7-14.3-32-32-32l-96 0zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 64-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l96 0c17.7 0 32-14.3 32-32l0-96z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Repeat for each game modal with unique IDs -->
+        <!-- Example for second game -->
+
+
+    <footer>
+        <p>&copy; 2024 Unblocked Games. All rights reserved.</p>
+    </footer>
+
+    
+    
+    <script src="scriptlite.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unblocked Games</title>
+    <link rel="stylesheet" href="stylelite.css">
+</head>
+<body>
+    <header>
+        <img src="images/latelogo.png" alt="Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="/latest.html">Home</a></li>
+                <li><a href="poetrylite.html" download="poetrylite.html">Install</a></li>
+                <li><a href="https://github.com/MrInc0gnito/melon/tree/main" target="_blank">
+                    <img src="https://minecraft.net/favicon.ico" alt="GitHub" class="minecraft-button">
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Featured Games</h2>
+        <div class="game-cards">
+            <!-- Game Cards -->
             <div class="game-card">
                 <img src="https://preview.redd.it/the-new-icons-kinda-goofy-on-mac-os-v0-gtfc99yy8q4b1.png?width=416&format=png&auto=webp&s=9a6ede1de47144442835fe645dcdc5a3705d8db6" alt="Miniblox">
                 <h3>Miniblox</h3>
@@ -49,6 +111,11 @@
                 <h3>Voxel Game</h3>
                 <button onclick="openGameModal('Voxel Game', 5)">Open</button>
             </div>
+            <div class="game-card">
+                <img src="https://www.drifted.com/media/games/drift-hunters-max/assets/images/favicon.ico" alt="Drift Hunters Max">
+                <h3>Drift Hunters Max</h3>
+                <button onclick="openGameModal('Drift Hunters Max', 6)">Open</button>
+            </div>
         </div>
     </main>
 
@@ -73,6 +140,21 @@
         <!-- Repeat for each game modal with unique IDs -->
         <!-- Example for second game -->
         <div id="gameModal2" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeGameModal(2)">&times;</span>
+                <h2 id="gameTitle2">Voxiom</h2>
+                <iframe id="gameFrame2" data-src="https://voxiom.io/" width="100%" height="400px" frameborder="0" allowfullscreen></iframe>
+                <div class="modal-controls">
+                    <button id="playButton2" class="play-button" onclick="togglePlay(2)">Start Game</button>
+                    <button class="fullscreen-button" onclick="toggleFullscreen(2)">
+                        <svg class="fullscreen-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M32 32C14.3 32 0 46.3 0 64l0 96c0 17.7 14.3 32 32 32s32-14.3 32-32l0-64 64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7 14.3 32 32 32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0 0-64zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32l64 0 0 64c0 17.7 14.3 32 32 32s32-14.3 32-32l0-96c0-17.7-14.3-32-32-32l-96 0zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 64-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l96 0c17.7 0 32-14.3 32-32l0-96z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+                <div id="gameModal2" class="modal">
             <div class="modal-content">
                 <span class="close-button" onclick="closeGameModal(2)">&times;</span>
                 <h2 id="gameTitle2">Voxiom</h2>
@@ -137,11 +219,28 @@
             </div>
         </div>
     </div>
+        <!-- Drift Hunters Max Modal -->
+        <div id="gameModal6" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeGameModal(6)">&times;</span>
+                <h2 id="gameTitle6">Drift Hunters Max</h2>
+                <iframe id="gameFrame6" data-src="https://www.drifted.com/drift-hunters-max/" width="100%" height="400px" frameborder="0" allowfullscreen></iframe>
+                <div class="modal-controls">
+                    <button id="playButton6" class="play-button" onclick="togglePlay(6)">Start Game</button>
+                    <button class="fullscreen-button" onclick="toggleFullscreen(6)">
+                        <svg class="fullscreen-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path d="M32 32C14.3 32 0 46.3 0 64l0 96c0 17.7 14.3 32 32 32s32-14.3 32-32l0-64 64 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L32 32zM64 352c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 96c0 17.7 14.3 32 32 32l96 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-64 0 0-64zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32l64 0 0 64c0 17.7 14.3 32 32 32s32-14.3 32-32l0-96c0-17.7-14.3-32-32-32l-96 0zM448 352c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 64-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l96 0c17.7 0 32-14.3 32-32l0-96z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer>
-        <p>&copy; 2024 Unblocked Games. All rights reserved.</p>
+        <p>Made with &hearts; by Unblocked Games Inc.</p>
     </footer>
-    
+
     <script src="scriptlite.js"></script>
 </body>
 </html>
