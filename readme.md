@@ -1,3 +1,6 @@
+# About EOL
+EOL (End Of Life) is when we discontinue updates for Snipe Co. software/websites. The latest version of SnipePoetry (04/12/2024) is SnipePoetry Popcorn (Hybrid) you can find it [here](https://github.com/Zepr01/snipepoetry-hybrid)
+
 WE ARE NOT RESPONSIBLE FOR ANY ISSUES OR TROUBLE YOU FACE WHILST USING SNIPEPOETRY MELON! Thanks :D 💠
 
 # Skip To Content Links
